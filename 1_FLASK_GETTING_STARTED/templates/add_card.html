@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="justify-center" style="margin-left: 200px;">
+
+
+
+    <div class="container" style="margin-top: 100px; text-align: center;">
+            <h3>Add Card</h3>
+            <form method="POST">
+                
+                <p>Enter Question</p>
+                <br />
+                <input type="text" name="question">
+                <br />
+                <p>Enter Answer</p>
+                <br />
+                <input type="text" name="answer">
+                <br />
+                <br />
+                <button class="btn btn-success" type="submit">Create Card</button>
+                
+
+            </form>
+    </div>
+
+</div>
+
+{% endblock %}

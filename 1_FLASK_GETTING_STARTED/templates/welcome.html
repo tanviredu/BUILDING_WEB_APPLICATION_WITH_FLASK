@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h3>Welcome To the FlashCard</h3>
+        <ul>
+            {% for card in cards %}
+            <li>    
+                <!-- loop.index0 is a builtin properties
+                that count the loop from the 0 -->
+                <a href="{{ url_for('card_view',index=loop.index0) }}">{{card.question}}</a>
+            </li>
+        {% endfor %}
+        
+    </ul>
+    <a href="{{ url_for('add_card') }}" class="btn btn-success">Add Card</a>
+</div>
+{% endblock %}
